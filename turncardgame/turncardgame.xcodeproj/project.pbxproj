@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC1AE4692601CB1500F6C177 /* MatchinGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1AE4682601CB1500F6C177 /* MatchinGame.swift */; };
+		CC1AE46B2601CB2E00F6C177 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1AE46A2601CB2E00F6C177 /* Card.swift */; };
+		CC7B355825F89DBE002F524A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B355725F89DBE002F524A /* AppDelegate.swift */; };
+		CC7B355A25F89DBE002F524A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B355925F89DBE002F524A /* SceneDelegate.swift */; };
+		CC7B355C25F89DBE002F524A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B355B25F89DBE002F524A /* ViewController.swift */; };
+		CC7B355F25F89DBE002F524A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7B355D25F89DBE002F524A /* Main.storyboard */; };
+		CC7B356125F89DC0002F524A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC7B356025F89DC0002F524A /* Assets.xcassets */; };
+		CC7B356425F89DC0002F524A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7B356225F89DC0002F524A /* LaunchScreen.storyboard */; };
+		CC7B356F25F89DC0002F524A /* turncardgameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B356E25F89DC0002F524A /* turncardgameTests.swift */; };
+		CC7B357A25F89DC1002F524A /* turncardgameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B357925F89DC1002F524A /* turncardgameUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC7B356B25F89DC0002F524A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC7B354C25F89DBE002F524A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC7B355325F89DBE002F524A;
+			remoteInfo = turncardgame;
+		};
+		CC7B357625F89DC1002F524A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC7B354C25F89DBE002F524A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC7B355325F89DBE002F524A;
+			remoteInfo = turncardgame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC1AE4682601CB1500F6C177 /* MatchinGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchinGame.swift; sourceTree = "<group>"; };
+		CC1AE46A2601CB2E00F6C177 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		CC7B355425F89DBE002F524A /* turncardgame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = turncardgame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7B355725F89DBE002F524A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC7B355925F89DBE002F524A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CC7B355B25F89DBE002F524A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC7B355E25F89DBE002F524A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC7B356025F89DC0002F524A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC7B356325F89DC0002F524A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC7B356525F89DC0002F524A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC7B356A25F89DC0002F524A /* turncardgameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = turncardgameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7B356E25F89DC0002F524A /* turncardgameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turncardgameTests.swift; sourceTree = "<group>"; };
+		CC7B357025F89DC0002F524A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC7B357525F89DC1002F524A /* turncardgameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = turncardgameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7B357925F89DC1002F524A /* turncardgameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turncardgameUITests.swift; sourceTree = "<group>"; };
+		CC7B357B25F89DC1002F524A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC7B355125F89DBE002F524A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7B356725F89DC0002F524A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7B357225F89DC1002F524A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC7B354B25F89DBE002F524A = {
+			isa = PBXGroup;
+			children = (
+				CC7B355625F89DBE002F524A /* turncardgame */,
+				CC7B356D25F89DC0002F524A /* turncardgameTests */,
+				CC7B357825F89DC1002F524A /* turncardgameUITests */,
+				CC7B355525F89DBE002F524A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC7B355525F89DBE002F524A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC7B355425F89DBE002F524A /* turncardgame.app */,
+				CC7B356A25F89DC0002F524A /* turncardgameTests.xctest */,
+				CC7B357525F89DC1002F524A /* turncardgameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC7B355625F89DBE002F524A /* turncardgame */ = {
+			isa = PBXGroup;
+			children = (
+				CC7B355725F89DBE002F524A /* AppDelegate.swift */,
+				CC7B355925F89DBE002F524A /* SceneDelegate.swift */,
+				CC7B355B25F89DBE002F524A /* ViewController.swift */,
+				CC7B355D25F89DBE002F524A /* Main.storyboard */,
+				CC7B356025F89DC0002F524A /* Assets.xcassets */,
+				CC7B356225F89DC0002F524A /* LaunchScreen.storyboard */,
+				CC7B356525F89DC0002F524A /* Info.plist */,
+				CC1AE4682601CB1500F6C177 /* MatchinGame.swift */,
+				CC1AE46A2601CB2E00F6C177 /* Card.swift */,
+			);
+			path = turncardgame;
+			sourceTree = "<group>";
+		};
+		CC7B356D25F89DC0002F524A /* turncardgameTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC7B356E25F89DC0002F524A /* turncardgameTests.swift */,
+				CC7B357025F89DC0002F524A /* Info.plist */,
+			);
+			path = turncardgameTests;
+			sourceTree = "<group>";
+		};
+		CC7B357825F89DC1002F524A /* turncardgameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC7B357925F89DC1002F524A /* turncardgameUITests.swift */,
+				CC7B357B25F89DC1002F524A /* Info.plist */,
+			);
+			path = turncardgameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC7B355325F89DBE002F524A /* turncardgame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC7B357E25F89DC1002F524A /* Build configuration list for PBXNativeTarget "turncardgame" */;
+			buildPhases = (
+				CC7B355025F89DBE002F524A /* Sources */,
+				CC7B355125F89DBE002F524A /* Frameworks */,
+				CC7B355225F89DBE002F524A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = turncardgame;
+			productName = turncardgame;
+			productReference = CC7B355425F89DBE002F524A /* turncardgame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC7B356925F89DC0002F524A /* turncardgameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC7B358125F89DC1002F524A /* Build configuration list for PBXNativeTarget "turncardgameTests" */;
+			buildPhases = (
+				CC7B356625F89DC0002F524A /* Sources */,
+				CC7B356725F89DC0002F524A /* Frameworks */,
+				CC7B356825F89DC0002F524A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC7B356C25F89DC0002F524A /* PBXTargetDependency */,
+			);
+			name = turncardgameTests;
+			productName = turncardgameTests;
+			productReference = CC7B356A25F89DC0002F524A /* turncardgameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC7B357425F89DC1002F524A /* turncardgameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC7B358425F89DC1002F524A /* Build configuration list for PBXNativeTarget "turncardgameUITests" */;
+			buildPhases = (
+				CC7B357125F89DC1002F524A /* Sources */,
+				CC7B357225F89DC1002F524A /* Frameworks */,
+				CC7B357325F89DC1002F524A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC7B357725F89DC1002F524A /* PBXTargetDependency */,
+			);
+			name = turncardgameUITests;
+			productName = turncardgameUITests;
+			productReference = CC7B357525F89DC1002F524A /* turncardgameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC7B354C25F89DBE002F524A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					CC7B355325F89DBE002F524A = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					CC7B356925F89DC0002F524A = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CC7B355325F89DBE002F524A;
+					};
+					CC7B357425F89DC1002F524A = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CC7B355325F89DBE002F524A;
+					};
+				};
+			};
+			buildConfigurationList = CC7B354F25F89DBE002F524A /* Build configuration list for PBXProject "turncardgame" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC7B354B25F89DBE002F524A;
+			productRefGroup = CC7B355525F89DBE002F524A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC7B355325F89DBE002F524A /* turncardgame */,
+				CC7B356925F89DC0002F524A /* turncardgameTests */,
+				CC7B357425F89DC1002F524A /* turncardgameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC7B355225F89DBE002F524A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC7B356425F89DC0002F524A /* LaunchScreen.storyboard in Resources */,
+				CC7B356125F89DC0002F524A /* Assets.xcassets in Resources */,
+				CC7B355F25F89DBE002F524A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7B356825F89DC0002F524A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7B357325F89DC1002F524A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC7B355025F89DBE002F524A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC7B355C25F89DBE002F524A /* ViewController.swift in Sources */,
+				CC7B355825F89DBE002F524A /* AppDelegate.swift in Sources */,
+				CC1AE46B2601CB2E00F6C177 /* Card.swift in Sources */,
+				CC7B355A25F89DBE002F524A /* SceneDelegate.swift in Sources */,
+				CC1AE4692601CB1500F6C177 /* MatchinGame.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7B356625F89DC0002F524A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC7B356F25F89DC0002F524A /* turncardgameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7B357125F89DC1002F524A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC7B357A25F89DC1002F524A /* turncardgameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC7B356C25F89DC0002F524A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC7B355325F89DBE002F524A /* turncardgame */;
+			targetProxy = CC7B356B25F89DC0002F524A /* PBXContainerItemProxy */;
+		};
+		CC7B357725F89DC1002F524A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC7B355325F89DBE002F524A /* turncardgame */;
+			targetProxy = CC7B357625F89DC1002F524A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC7B355D25F89DBE002F524A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7B355E25F89DBE002F524A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC7B356225F89DC0002F524A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7B356325F89DC0002F524A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC7B357C25F89DC1002F524A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC7B357D25F89DC1002F524A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC7B357F25F89DC1002F524A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = turncardgame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.se1421.no97.turncardgame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC7B358025F89DC1002F524A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = turncardgame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.se1421.no97.turncardgame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC7B358225F89DC1002F524A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = turncardgameTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.se1421.no97.turncardgameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/turncardgame.app/turncardgame";
+			};
+			name = Debug;
+		};
+		CC7B358325F89DC1002F524A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = turncardgameTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.se1421.no97.turncardgameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/turncardgame.app/turncardgame";
+			};
+			name = Release;
+		};
+		CC7B358525F89DC1002F524A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = turncardgameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.se1421.no97.turncardgameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = turncardgame;
+			};
+			name = Debug;
+		};
+		CC7B358625F89DC1002F524A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = turncardgameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.se1421.no97.turncardgameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = turncardgame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC7B354F25F89DBE002F524A /* Build configuration list for PBXProject "turncardgame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7B357C25F89DC1002F524A /* Debug */,
+				CC7B357D25F89DC1002F524A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC7B357E25F89DC1002F524A /* Build configuration list for PBXNativeTarget "turncardgame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7B357F25F89DC1002F524A /* Debug */,
+				CC7B358025F89DC1002F524A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC7B358125F89DC1002F524A /* Build configuration list for PBXNativeTarget "turncardgameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7B358225F89DC1002F524A /* Debug */,
+				CC7B358325F89DC1002F524A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC7B358425F89DC1002F524A /* Build configuration list for PBXNativeTarget "turncardgameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7B358525F89DC1002F524A /* Debug */,
+				CC7B358625F89DC1002F524A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC7B354C25F89DBE002F524A /* Project object */;
+}
