@@ -22,7 +22,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="AC"/>
                                 <connections>
-                                    <action selector="touchSpecial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LtI-4o-xDc"/>
+                                    <action selector="touchReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rD6-HN-GLI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZA-GB-s8P">
@@ -31,7 +31,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="+/-"/>
                                 <connections>
-                                    <action selector="touchSpecial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2RE-oK-EyI"/>
+                                    <action selector="touchToggleSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RRc-Qf-8mj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZH3-Y4-zN8">
@@ -40,7 +40,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="%"/>
                                 <connections>
-                                    <action selector="touchSpecial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D0w-kZ-chE"/>
+                                    <action selector="touchPercentage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ypI-ZD-Tvh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hz0-G1-T3G">
@@ -194,6 +194,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-oE-hHl">
+                                <rect key="frame" x="32" y="113" width="350" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,9 +223,9 @@
                         <outletCollection property="operatorButtons" destination="b5K-Xk-olX" collectionClass="NSMutableArray" id="bv2-dW-Tlo"/>
                         <outletCollection property="operatorButtons" destination="NoK-ya-9Kb" collectionClass="NSMutableArray" id="sbY-Ls-yG1"/>
                         <outletCollection property="operatorButtons" destination="Pdy-8f-Yya" collectionClass="NSMutableArray" id="482-yh-nxs"/>
-                        <outletCollection property="specialButtons" destination="Hmv-jg-Ced" collectionClass="NSMutableArray" id="q9X-JU-X4r"/>
-                        <outletCollection property="specialButtons" destination="cZA-GB-s8P" collectionClass="NSMutableArray" id="nFs-R1-EXA"/>
-                        <outletCollection property="specialButtons" destination="ZH3-Y4-zN8" collectionClass="NSMutableArray" id="Vpt-gn-7xN"/>
+                        <outletCollection property="funcButtons" destination="Hmv-jg-Ced" collectionClass="NSMutableArray" id="qX7-mE-Jo9"/>
+                        <outletCollection property="funcButtons" destination="cZA-GB-s8P" collectionClass="NSMutableArray" id="1sU-d0-BO8"/>
+                        <outletCollection property="funcButtons" destination="ZH3-Y4-zN8" collectionClass="NSMutableArray" id="HIU-C1-Wdz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

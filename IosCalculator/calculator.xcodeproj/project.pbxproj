@@ -16,6 +16,7 @@
 		CC3140442638744300902EC1 /* calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3140432638744300902EC1 /* calculatorTests.swift */; };
 		CC31404F2638744300902EC1 /* calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC31404E2638744300902EC1 /* calculatorUITests.swift */; };
 		CC314096263BF8F300902EC1 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC314095263BF8F300902EC1 /* Calculator.swift */; };
+		CC314098263C646600902EC1 /* StackG.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC314097263C646600902EC1 /* StackG.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CC31404E2638744300902EC1 /* calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorUITests.swift; sourceTree = "<group>"; };
 		CC3140502638744300902EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC314095263BF8F300902EC1 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		CC314097263C646600902EC1 /* StackG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackG.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				CC3140372638744300902EC1 /* LaunchScreen.storyboard */,
 				CC31403A2638744300902EC1 /* Info.plist */,
 				CC314095263BF8F300902EC1 /* Calculator.swift */,
+				CC314097263C646600902EC1 /* StackG.swift */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC314098263C646600902EC1 /* StackG.swift in Sources */,
 				CC3140312638744200902EC1 /* ViewController.swift in Sources */,
 				CC314096263BF8F300902EC1 /* Calculator.swift in Sources */,
 				CC31402D2638744200902EC1 /* AppDelegate.swift in Sources */,
