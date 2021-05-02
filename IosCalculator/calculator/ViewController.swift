@@ -13,11 +13,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     
+    @IBOutlet weak var historyLabel: UILabel!
+    
     @IBOutlet var operandButtons: [UIButton]!
     
     @IBOutlet var operatorButtons: [UIButton]!
     
-    @IBOutlet var specialButtons: [UIButton]!
+    @IBOutlet var funcButtons: [UIButton]!
     
     func setOperandBtnLayout() {
         for index in operandButtons.indices{
@@ -45,9 +47,9 @@ class ViewController: UIViewController {
         }
     }
     
-    func setSpecialBtnLayout() {
-        for index in specialButtons.indices{
-            let button = specialButtons[index]
+    func setFuncBtnLayout() {
+        for index in funcButtons.indices{
+            let button = funcButtons[index]
             button.layer.cornerRadius = button.frame.width / 2
             button.layer.masksToBounds = true
             button.backgroundColor = UIColor.lightGray
@@ -62,25 +64,47 @@ class ViewController: UIViewController {
         
         setOperandBtnLayout()
         setOperatorBtnLayout()
-        setSpecialBtnLayout()
+        setFuncBtnLayout()
     }
     
     @IBAction func touchOperand(_ sender: UIButton) {
-        if let operand =  sender.titleLabel?.text {
-            print(operand)
-        }
-    }
-    
-    @IBAction func touchSpecial(_ sender: UIButton) {
-        if let special =  sender.titleLabel?.text {
-            print(special)
+        if let touchOperand =  sender.titleLabel?.text {
+            calculator.processInputOperand(input: touchOperand)
+            updateViewFromModel()
         }
     }
     
     @IBAction func touchOperator(_ sender: UIButton) {
-        if let myOperator =  sender.titleLabel?.text {
-            print(myOperator)
+        if let touchOperator =  sender.titleLabel?.text {
+            calculator.processInputOperator(input: touchOperator)
         }
+    }
+    
+    @IBAction func touchEqual(_ sender: UIButton) {
+        calculator.processInputEqual()
+        updateViewFromModel()
+    }
+    
+    @IBAction func touchReset(_ sender: Any) {
+        calculator.reset()
+        updateViewFromModel()
+    }
+    
+    
+    @IBAction func touchToggleSign(_ sender: Any) {
+        calculator.toggleSign()
+        updateViewFromModel()
+    }
+    
+    
+    @IBAction func touchPercentage(_ sender: Any) {
+        calculator.percentage()
+        updateViewFromModel()
+    }
+    
+    func updateViewFromModel() {
+        resultLabel.text = calculator.currentOperand
+        historyLabel.text = calculator.getHistory()
     }
     
 }

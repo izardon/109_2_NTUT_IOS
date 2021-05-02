@@ -155,7 +155,7 @@
                                 <rect key="frame" x="302" y="555" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="÷"/>
+                                <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WvL-nL-BeU"/>
                                 </connections>
@@ -184,18 +184,18 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="="/>
                                 <connections>
-                                    <action selector="touchOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QcT-h8-sL5"/>
+                                    <action selector="touchEqual:" destination="BYZ-38-t0r" eventType="touchUpInside" id="asU-Iw-Z9v"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTo-yY-3Co">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="29" translatesAutoresizingMaskIntoConstraints="NO" id="MTo-yY-3Co">
                                 <rect key="frame" x="32" y="182" width="350" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-oE-hHl">
-                                <rect key="frame" x="32" y="113" width="350" height="61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-oE-hHl">
+                                <rect key="frame" x="32" y="64" width="350" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -206,6 +206,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
+                        <outlet property="historyLabel" destination="wLV-oE-hHl" id="NqE-LO-Xc2"/>
                         <outlet property="resultLabel" destination="MTo-yY-3Co" id="vrU-Ni-xJ7"/>
                         <outletCollection property="operandButtons" destination="tgk-ZO-rPR" collectionClass="NSMutableArray" id="wGT-ZP-qyN"/>
                         <outletCollection property="operandButtons" destination="748-fy-fwh" collectionClass="NSMutableArray" id="pmk-n1-sdh"/>

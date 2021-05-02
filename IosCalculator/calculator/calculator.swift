@@ -8,7 +8,7 @@
 import Foundation
 
 class Calculator {
-    var calculationResult:Double! = 0
+    var calculationResult:Decimal! = 0
     var currentOperand:String! = "0"
     var currentOperator:String! = ""
     var history:[String]! = []
@@ -21,8 +21,8 @@ class Calculator {
         "-" : 1
     ]
     
-    func processInputOperand(input:String) {
-        updateHistory()
+    public func processInputOperand(input:String) {
+        addHistory(elem: currentOperator)
         processExpression()
         saveOperatorToExpression()
         
@@ -36,8 +36,8 @@ class Calculator {
         }
     }
     
-    func processExpression() {
-        if(!expression.empty() && expression.count() >= 3) {
+    private func processExpression() {
+        if(currentOperator != "" && expression.count() >= 3) {
             if(isPreviousOperatorPriorityGreaterThenOrEqualCurrentOperatorPriority()) {
                 executeCalculation()
                 saveOperandToExpression()
@@ -45,7 +45,7 @@ class Calculator {
         }
     }
     
-    func saveOperatorToExpression() {
+    private func saveOperatorToExpression() {
         if(currentOperator != "") {
             preOperatorPriority = operatorPriorityDict[currentOperator]
             expression.push(item: currentOperator)
@@ -53,58 +53,54 @@ class Calculator {
         }
     }
     
-    func processInputOperator(input: String) {
-        updateHistory()
+    public func processInputEqual() {
+        currentOperator = ""
+        currentOperand = removeOperandRedundantDotOrZero(operand: currentOperand)
+        addHistory(elem: currentOperand)
         saveOperandToExpression()
         
-        currentOperator = input
-        if(currentOperator == "=") {
-            updateHistory()
-            while(expression.count() > 1) {
+        if(expression.count() >= 3) {
+            addHistory(elem: "=")
+            
+            while(expression.count() >= 3) {
                 executeCalculation()
                 expression.push(item: currentOperand)
             }
+        } else {
+            currentOperand = expression.pop()
+            history.removeLast()
         }
     }
     
-    func saveOperandToExpression() {
+    public func processInputOperator(input: String) {
+        currentOperand = removeOperandRedundantDotOrZero(operand: currentOperand)
+        addHistory(elem: currentOperand)
+        saveOperandToExpression()
+        
+        currentOperator = input
+    }
+    
+    private func saveOperandToExpression() {
         if(currentOperand != "") {
             expression.push(item: currentOperand)
             currentOperand = ""
         }
     }
     
-    func isPreviousOperatorPriorityGreaterThenOrEqualCurrentOperatorPriority() -> Bool {
+    private func isPreviousOperatorPriorityGreaterThenOrEqualCurrentOperatorPriority() -> Bool {
         return preOperatorPriority >= (operatorPriorityDict[currentOperator]!)
     }
     
-    func updateHistory() {
-        if(currentOperand != "") {
-            if(history.count > 0 && !isOperator(elem: history.last ?? "")) {
-                history.removeLast()
-            }
-            history.append(currentOperand)
-        }
-        
-        if(currentOperator != "") {
-            history.append(currentOperator)
+    private func addHistory(elem: String) {
+        if(elem != "") {
+            history.append(elem)
         }
     }
     
-    func isOperator(elem: String) -> Bool {
-        var isOperator = false
-        operatorPriorityDict.keys.forEach { key in
-            if(elem == key) {
-                isOperator = true
-            }
-        }
-        return isOperator
-    }
-    
-    func executeCalculation() {
-        let rightOperand:Double! = Double(expression.pop()!)
+    private func executeCalculation() {
+        let rightOperand:Decimal! = Decimal(string: expression.pop()!)
         let calOperator = expression.pop()!
-        let leftOperand:Double! = Double(expression.pop()!)
+        let leftOperand:Decimal! = Decimal(string: expression.pop()!)
         
         switch calOperator {
         case "+":
@@ -119,23 +115,22 @@ class Calculator {
             break
         }
         
-        currentOperand = String(calculationResult)
-        removeOperandRedundantDotOrZero()
+        currentOperand = removeOperandRedundantDotOrZero(operand: NSDecimalNumber(decimal: calculationResult).stringValue)
     }
     
-    func add(a:Double!, b:Double!) {
+    private func add(a:Decimal!, b:Decimal!) {
         calculationResult = a + b
     }
     
-    func subtract(a:Double!, b:Double!) {
+    private func subtract(a:Decimal!, b:Decimal!) {
         calculationResult =  a - b
     }
     
-    func multiply(a:Double!, b:Double!) {
+    private func multiply(a:Decimal!, b:Decimal!) {
         calculationResult = a * b
     }
     
-    func divide(a:Double!, b:Double!) {
+    private func divide(a:Decimal!, b:Decimal!) {
         if(b == 0) {
             calculationResult = 0
         } else {
@@ -143,7 +138,7 @@ class Calculator {
         }
     }
     
-    func reset() {
+    public func reset() {
         calculationResult = 0
         currentOperand = "0"
         history.removeAll()
@@ -152,13 +147,13 @@ class Calculator {
         }
     }
     
-    func percentage() {
+    public func percentage() {
         var operand:Double! = Double(currentOperand)
         operand = operand * 0.01
         currentOperand = String(operand)
     }
     
-    func toggleSign() {
+    public func toggleSign() {
         if(currentOperand.prefix(1) == "-") {
             currentOperand.removeFirst()
         } else {
@@ -166,18 +161,20 @@ class Calculator {
         }
     }
     
-    func removeOperandRedundantDotOrZero() {
-        if(currentOperand.contains(".")) {
-            while(currentOperand.last == "0") {
-                currentOperand.removeLast()
+    private func removeOperandRedundantDotOrZero(operand: String) -> String {
+        var formatOperand = operand
+        if(formatOperand.contains(".")) {
+            while(formatOperand.last == "0") {
+                formatOperand.removeLast()
             }
-            if(currentOperand.last == ".") {
-                currentOperand.removeLast()
+            if(formatOperand.last == ".") {
+                formatOperand.removeLast()
             }
         }
+        return formatOperand
     }
     
-    func getHistory() -> String {
+    public func getHistory() -> String {
         return history.joined(separator: " ")
     }
 }

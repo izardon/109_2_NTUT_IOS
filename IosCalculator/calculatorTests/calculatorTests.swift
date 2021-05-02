@@ -21,66 +21,6 @@ class calculatorTests: XCTestCase {
       calculator = nil
       try super.tearDownWithError()
     }
-
-    func test_add() throws {
-        // Given
-        let a:Double! = 1.0
-        let b:Double! = 2.3
-        
-        // When
-        calculator.add(a: a, b: b)
-        
-        // Then
-        XCTAssertEqual(3.3, calculator.calculationResult, accuracy: 0.001)
-    }
-    
-    func test_subtract() throws {
-        // Given
-        let a:Double! = 1.0
-        let b:Double! = 2.3
-        
-        // When
-        calculator.subtract(a: a, b: b)
-        
-        // Then
-        XCTAssertEqual(-1.3, calculator.calculationResult, accuracy: 0.001)
-    }
-    
-    func test_multiply() throws {
-        // Given
-        let a:Double! = 2.0
-        let b:Double! = 2.3
-        
-        // When
-        calculator.multiply(a: a, b: b)
-        
-        // Then
-        XCTAssertEqual(4.6, calculator.calculationResult, accuracy: 0.001)
-    }
-    
-    func test_divided_by_two_value() throws {
-        // Given
-        let a:Double! = 4.6
-        let b:Double! = 2.3
-        
-        // When
-        calculator.divide(a: a, b: b)
-        
-        // Then
-        XCTAssertEqual(2, calculator.calculationResult, accuracy: 0.001)
-    }
-    
-    func test_divided_by_zero() throws {
-        // Given
-        let a:Double! = 4.6
-        let b:Double! = 0
-        
-        // When
-        calculator.divide(a: a, b: b)
-        
-        // Then
-        XCTAssertEqual(0, calculator.calculationResult, accuracy: 0.001)
-    }
     
     func test_update_current_operand_with_integer_input() throws {
         // Given
@@ -135,25 +75,31 @@ class calculatorTests: XCTestCase {
     }
     
     func test_remove_operand_redundant_zero_after_dot() throws {
+        // 5.2100 +
+        
         // Given
-        calculator.currentOperand = "5.2100"
-        
+        calculator.processInputOperand(input: "5.2100")
+
         // When
-        calculator.removeOperandRedundantDotOrZero()
-        
+        calculator.processInputOperator(input: "+")
+
         // Then
-        XCTAssertEqual("5.21", calculator.currentOperand)
+        XCTAssertEqual("5.21", calculator.expression.peek())
+        XCTAssertEqual("5.21", calculator.getHistory())
     }
-    
+
     func test_remove_operand_redundant_zero_and_dot() throws {
+        // 5.0 +
+        
         // Given
-        calculator.currentOperand = "5.0"
-        
+        calculator.processInputOperand(input: "5.0")
+
         // When
-        calculator.removeOperandRedundantDotOrZero()
-        
+        calculator.processInputOperator(input: "+")
+
         // Then
-        XCTAssertEqual("5", calculator.currentOperand)
+        XCTAssertEqual("5", calculator.expression.peek())
+        XCTAssertEqual("5", calculator.getHistory())
     }
     
     func test_expression_when_input_one_operator() {
@@ -185,7 +131,7 @@ class calculatorTests: XCTestCase {
         calculator.processInputOperand(input: "5")
         
         // When
-        calculator.processInputOperator(input: "=")
+        calculator.processInputEqual()
         
         // Than
         XCTAssertEqual(16.25, calculator.calculationResult)
@@ -201,7 +147,7 @@ class calculatorTests: XCTestCase {
         calculator.processInputOperand(input: "5")
         
         // When
-        calculator.processInputOperator(input: "=")
+        calculator.processInputEqual()
         
         // Then
         XCTAssertEqual(5, calculator.calculationResult)
@@ -209,23 +155,24 @@ class calculatorTests: XCTestCase {
     }
     
     func test_continue_input_operator() {
-        // 1 + * + 4 = 5
+        // 1 + × + 4 = 5
         
         //Given
         calculator.processInputOperand(input: "1")
         
         calculator.processInputOperator(input: "+")
-        calculator.processInputOperator(input: "*")
+        calculator.processInputOperator(input: "×")
         calculator.processInputOperator(input: "+")
         
         calculator.processInputOperand(input: "4")
         
         // When
-        calculator.processInputOperator(input: "=")
+        calculator.processInputEqual()
         
         // Then
         XCTAssertEqual(5, calculator.calculationResult)
         XCTAssertEqual("5", calculator.currentOperand)
+        XCTAssertEqual("1 + 4 =", calculator.getHistory())
     }
     
     func test_toggle_operand_negative_sign() throws {
@@ -299,7 +246,7 @@ class calculatorTests: XCTestCase {
         calculator.processInputOperand(input: "5")
         
         // When
-        calculator.processInputOperator(input: "=")
+        calculator.processInputEqual()
         
         // Then
         XCTAssertEqual(18.5, calculator.calculationResult)
@@ -322,7 +269,7 @@ class calculatorTests: XCTestCase {
         calculator.processInputOperand(input: "4")
 
         // When
-        calculator.processInputOperator(input: "=")
+        calculator.processInputEqual()
 
         // Then
         XCTAssertEqual(20, calculator.calculationResult)
@@ -348,7 +295,7 @@ class calculatorTests: XCTestCase {
         calculator.processInputOperand(input: "2")
 
         // When
-        calculator.processInputOperator(input: "=")
+        calculator.processInputEqual()
 
         // Then
         XCTAssertEqual(30, calculator.calculationResult)
@@ -356,7 +303,7 @@ class calculatorTests: XCTestCase {
     }
     
     func test_expression_of_three_operator_when_operator_priority_is_complex() throws {
-        // 10 + 2.5 × 4 × 2 + 5 ÷ 2 = 32.5
+        // 10 + 2.5 × 4 × 10 + 40 ÷ 20 = 112
 
         //Given
         calculator.processInputOperand(input: "10")
@@ -371,22 +318,103 @@ class calculatorTests: XCTestCase {
         
         calculator.processInputOperator(input: "×")
 
-        calculator.processInputOperand(input: "2")
+        calculator.processInputOperand(input: "10")
         
         calculator.processInputOperator(input: "+")
 
+        calculator.processInputOperand(input: "40")
+        
+        calculator.processInputOperator(input: "÷")
+
+        calculator.processInputOperand(input: "20")
+
+        // When
+        calculator.processInputEqual()
+
+        // Then
+        XCTAssertEqual(112, calculator.calculationResult)
+        XCTAssertEqual("112", calculator.currentOperand)
+        XCTAssertEqual("10 + 2.5 × 4 × 10 + 40 ÷ 20 =", calculator.getHistory())
+        XCTAssertEqual("112", calculator.expression.peek())
+        
+    }
+    
+    func test_divided_by_zero() throws {
+        // 5 ÷ 0 = 0
+        
+        // Given
         calculator.processInputOperand(input: "5")
         
         calculator.processInputOperator(input: "÷")
 
-        calculator.processInputOperand(input: "2")
+        calculator.processInputOperand(input: "0")
 
+        // When
+        calculator.processInputEqual()
+        
+        // Then
+        XCTAssertEqual("0", calculator.currentOperand)
+    }
+    
+    func test_first_step_input_equal() throws {
+        // =
+
+        // Given
+        
         // When
         calculator.processInputOperator(input: "=")
 
         // Then
-        XCTAssertEqual(32.5, calculator.calculationResult)
-        XCTAssertEqual("32.5", calculator.currentOperand)
-        XCTAssertEqual("10 + 2.5 × 4 × 2 + 5 ÷ 2 =", calculator.getHistory())
+        XCTAssertEqual("", calculator.currentOperand)
+        XCTAssertEqual("0", calculator.getHistory())
+    }
+    
+    func test_input_equal_when_expression_cannot_calculate() throws {
+        // 12 =
+
+        // Given
+        calculator.processInputOperand(input: "12")
+
+        // When
+        calculator.processInputEqual()
+        
+        // Then
+        XCTAssertEqual("12", calculator.currentOperand)
+        XCTAssertEqual("", calculator.getHistory())
+    }
+    
+    func test_continue_input_equal_and_then_check_history() throws {
+        // 1 = = =
+
+        // Given
+        calculator.processInputOperand(input: "1")
+
+        // When
+        calculator.processInputEqual()
+        calculator.processInputEqual()
+        calculator.processInputEqual()
+        
+        // Then
+        XCTAssertEqual("1", calculator.currentOperand)
+        XCTAssertEqual("", calculator.getHistory())
+    }
+    
+    func test_input_equal_when_expression_cannot_calculate_and_then_update_expression_to_can_be_calculated() throws {
+        // 1 = = = + 5 = 6
+
+        // Given
+        calculator.processInputOperand(input: "1")
+        calculator.processInputEqual()
+        calculator.processInputEqual()
+        calculator.processInputEqual()
+        calculator.processInputOperator(input: "+")
+        calculator.processInputOperand(input: "5")
+
+        // When
+        calculator.processInputEqual()
+        
+        // Then
+        XCTAssertEqual("6", calculator.currentOperand)
+        XCTAssertEqual("1 + 5 =", calculator.getHistory())
     }
 }
