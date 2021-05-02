@@ -26,7 +26,7 @@ class Calculator {
         processExpression()
         saveOperatorToExpression()
         
-        if(currentOperand == "0") {
+        if(currentOperand == "0" && input != ".") {
             currentOperand = input
         } else if (currentOperand.contains(".") && input == ".") {
             // do nothing

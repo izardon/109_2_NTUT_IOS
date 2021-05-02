@@ -417,4 +417,19 @@ class calculatorTests: XCTestCase {
         XCTAssertEqual("6", calculator.currentOperand)
         XCTAssertEqual("1 + 5 =", calculator.getHistory())
     }
+    
+    func test_input_operand_less_than_zero() throws {
+        // 0.62
+
+        // Given
+        
+        // When
+        calculator.processInputOperand(input: "0")
+        calculator.processInputOperand(input: ".")
+        calculator.processInputOperand(input: "6")
+        calculator.processInputOperand(input: "2")
+        
+        // Then
+        XCTAssertEqual("0.62", calculator.currentOperand)
+    }
 }
