@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC58CEB626692105001D49CC /* ImageClassifierAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CEB526692105001D49CC /* ImageClassifierAppApp.swift */; };
+		CC58CEB826692105001D49CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CEB726692105001D49CC /* ContentView.swift */; };
+		CC58CEBA26692108001D49CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC58CEB926692108001D49CC /* Assets.xcassets */; };
+		CC58CEBD26692108001D49CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC58CEBC26692108001D49CC /* Preview Assets.xcassets */; };
+		CC58CEC826692109001D49CC /* ImageClassifierAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CEC726692109001D49CC /* ImageClassifierAppTests.swift */; };
+		CC58CED326692109001D49CC /* ImageClassifierAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CED226692109001D49CC /* ImageClassifierAppUITests.swift */; };
+		CC58CEE3266928C4001D49CC /* AnimalImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CC58CEE2266928C4001D49CC /* AnimalImageClassifier.mlmodel */; };
+		CC58CEE526692EBE001D49CC /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC58CEE426692EBE001D49CC /* UIImage.swift */; };
+		CC58CEE7266938EF001D49CC /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CC58CEE6266938EF001D49CC /* SqueezeNet.mlmodel */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC58CEC426692109001D49CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC58CEAA26692105001D49CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC58CEB126692105001D49CC;
+			remoteInfo = ImageClassifierApp;
+		};
+		CC58CECF26692109001D49CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC58CEAA26692105001D49CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC58CEB126692105001D49CC;
+			remoteInfo = ImageClassifierApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC58CEB226692105001D49CC /* ImageClassifierApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageClassifierApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC58CEB526692105001D49CC /* ImageClassifierAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifierAppApp.swift; sourceTree = "<group>"; };
+		CC58CEB726692105001D49CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC58CEB926692108001D49CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC58CEBC26692108001D49CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC58CEBE26692108001D49CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC58CEC326692109001D49CC /* ImageClassifierAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageClassifierAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC58CEC726692109001D49CC /* ImageClassifierAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifierAppTests.swift; sourceTree = "<group>"; };
+		CC58CEC926692109001D49CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC58CECE26692109001D49CC /* ImageClassifierAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageClassifierAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC58CED226692109001D49CC /* ImageClassifierAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifierAppUITests.swift; sourceTree = "<group>"; };
+		CC58CED426692109001D49CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC58CEE2266928C4001D49CC /* AnimalImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimalImageClassifier.mlmodel; sourceTree = "<group>"; };
+		CC58CEE426692EBE001D49CC /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		CC58CEE6266938EF001D49CC /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC58CEAF26692105001D49CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC58CEC026692109001D49CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC58CECB26692109001D49CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC58CEA926692105001D49CC = {
+			isa = PBXGroup;
+			children = (
+				CC58CEB426692105001D49CC /* ImageClassifierApp */,
+				CC58CEC626692109001D49CC /* ImageClassifierAppTests */,
+				CC58CED126692109001D49CC /* ImageClassifierAppUITests */,
+				CC58CEB326692105001D49CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC58CEB326692105001D49CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC58CEB226692105001D49CC /* ImageClassifierApp.app */,
+				CC58CEC326692109001D49CC /* ImageClassifierAppTests.xctest */,
+				CC58CECE26692109001D49CC /* ImageClassifierAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC58CEB426692105001D49CC /* ImageClassifierApp */ = {
+			isa = PBXGroup;
+			children = (
+				CC58CEE6266938EF001D49CC /* SqueezeNet.mlmodel */,
+				CC58CEE2266928C4001D49CC /* AnimalImageClassifier.mlmodel */,
+				CC58CEB526692105001D49CC /* ImageClassifierAppApp.swift */,
+				CC58CEB726692105001D49CC /* ContentView.swift */,
+				CC58CEB926692108001D49CC /* Assets.xcassets */,
+				CC58CEBE26692108001D49CC /* Info.plist */,
+				CC58CEBB26692108001D49CC /* Preview Content */,
+				CC58CEE426692EBE001D49CC /* UIImage.swift */,
+			);
+			path = ImageClassifierApp;
+			sourceTree = "<group>";
+		};
+		CC58CEBB26692108001D49CC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CC58CEBC26692108001D49CC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC58CEC626692109001D49CC /* ImageClassifierAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC58CEC726692109001D49CC /* ImageClassifierAppTests.swift */,
+				CC58CEC926692109001D49CC /* Info.plist */,
+			);
+			path = ImageClassifierAppTests;
+			sourceTree = "<group>";
+		};
+		CC58CED126692109001D49CC /* ImageClassifierAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC58CED226692109001D49CC /* ImageClassifierAppUITests.swift */,
+				CC58CED426692109001D49CC /* Info.plist */,
+			);
+			path = ImageClassifierAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC58CEB126692105001D49CC /* ImageClassifierApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC58CED726692109001D49CC /* Build configuration list for PBXNativeTarget "ImageClassifierApp" */;
+			buildPhases = (
+				CC58CEAE26692105001D49CC /* Sources */,
+				CC58CEAF26692105001D49CC /* Frameworks */,
+				CC58CEB026692105001D49CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageClassifierApp;
+			productName = ImageClassifierApp;
+			productReference = CC58CEB226692105001D49CC /* ImageClassifierApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC58CEC226692109001D49CC /* ImageClassifierAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC58CEDA26692109001D49CC /* Build configuration list for PBXNativeTarget "ImageClassifierAppTests" */;
+			buildPhases = (
+				CC58CEBF26692109001D49CC /* Sources */,
+				CC58CEC026692109001D49CC /* Frameworks */,
+				CC58CEC126692109001D49CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC58CEC526692109001D49CC /* PBXTargetDependency */,
+			);
+			name = ImageClassifierAppTests;
+			productName = ImageClassifierAppTests;
+			productReference = CC58CEC326692109001D49CC /* ImageClassifierAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC58CECD26692109001D49CC /* ImageClassifierAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC58CEDD26692109001D49CC /* Build configuration list for PBXNativeTarget "ImageClassifierAppUITests" */;
+			buildPhases = (
+				CC58CECA26692109001D49CC /* Sources */,
+				CC58CECB26692109001D49CC /* Frameworks */,
+				CC58CECC26692109001D49CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC58CED026692109001D49CC /* PBXTargetDependency */,
+			);
+			name = ImageClassifierAppUITests;
+			productName = ImageClassifierAppUITests;
+			productReference = CC58CECE26692109001D49CC /* ImageClassifierAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC58CEAA26692105001D49CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					CC58CEB126692105001D49CC = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					CC58CEC226692109001D49CC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CC58CEB126692105001D49CC;
+					};
+					CC58CECD26692109001D49CC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CC58CEB126692105001D49CC;
+					};
+				};
+			};
+			buildConfigurationList = CC58CEAD26692105001D49CC /* Build configuration list for PBXProject "ImageClassifierApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC58CEA926692105001D49CC;
+			productRefGroup = CC58CEB326692105001D49CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC58CEB126692105001D49CC /* ImageClassifierApp */,
+				CC58CEC226692109001D49CC /* ImageClassifierAppTests */,
+				CC58CECD26692109001D49CC /* ImageClassifierAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC58CEB026692105001D49CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC58CEBD26692108001D49CC /* Preview Assets.xcassets in Resources */,
+				CC58CEBA26692108001D49CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC58CEC126692109001D49CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC58CECC26692109001D49CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC58CEAE26692105001D49CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC58CEB826692105001D49CC /* ContentView.swift in Sources */,
+				CC58CEE526692EBE001D49CC /* UIImage.swift in Sources */,
+				CC58CEE7266938EF001D49CC /* SqueezeNet.mlmodel in Sources */,
+				CC58CEE3266928C4001D49CC /* AnimalImageClassifier.mlmodel in Sources */,
+				CC58CEB626692105001D49CC /* ImageClassifierAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC58CEBF26692109001D49CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC58CEC826692109001D49CC /* ImageClassifierAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC58CECA26692109001D49CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC58CED326692109001D49CC /* ImageClassifierAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC58CEC526692109001D49CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC58CEB126692105001D49CC /* ImageClassifierApp */;
+			targetProxy = CC58CEC426692109001D49CC /* PBXContainerItemProxy */;
+		};
+		CC58CED026692109001D49CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC58CEB126692105001D49CC /* ImageClassifierApp */;
+			targetProxy = CC58CECF26692109001D49CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CC58CED526692109001D49CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC58CED626692109001D49CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC58CED826692109001D49CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ImageClassifierApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ImageClassifierApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.selab1421.no97.ImageClassifierApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC58CED926692109001D49CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ImageClassifierApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ImageClassifierApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.selab1421.no97.ImageClassifierApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC58CEDB26692109001D49CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageClassifierAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.selab1421.no97.ImageClassifierAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageClassifierApp.app/ImageClassifierApp";
+			};
+			name = Debug;
+		};
+		CC58CEDC26692109001D49CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageClassifierAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.selab1421.no97.ImageClassifierAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageClassifierApp.app/ImageClassifierApp";
+			};
+			name = Release;
+		};
+		CC58CEDE26692109001D49CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageClassifierAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.selab1421.no97.ImageClassifierAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageClassifierApp;
+			};
+			name = Debug;
+		};
+		CC58CEDF26692109001D49CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageClassifierAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ntut.edu.tw.selab1421.no97.ImageClassifierAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageClassifierApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC58CEAD26692105001D49CC /* Build configuration list for PBXProject "ImageClassifierApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC58CED526692109001D49CC /* Debug */,
+				CC58CED626692109001D49CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC58CED726692109001D49CC /* Build configuration list for PBXNativeTarget "ImageClassifierApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC58CED826692109001D49CC /* Debug */,
+				CC58CED926692109001D49CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC58CEDA26692109001D49CC /* Build configuration list for PBXNativeTarget "ImageClassifierAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC58CEDB26692109001D49CC /* Debug */,
+				CC58CEDC26692109001D49CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC58CEDD26692109001D49CC /* Build configuration list for PBXNativeTarget "ImageClassifierAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC58CEDE26692109001D49CC /* Debug */,
+				CC58CEDF26692109001D49CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC58CEAA26692105001D49CC /* Project object */;
+}
